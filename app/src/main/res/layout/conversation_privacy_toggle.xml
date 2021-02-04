@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/call_header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/double_margin_between_elements"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/initial_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/public_call_link"
+            android:layout_width="@dimen/small_item_height"
+            android:layout_height="@dimen/small_item_height"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_public_black_24px"
+            android:tint="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/public_call_link"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="@string/nc_public_call"
+            android:textAppearance="?android:attr/textAppearanceListItem"
+            tools:text="@string/nc_public_call" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/secondary_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:minHeight="@dimen/small_item_height"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/nc_public_call_explanation"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceListItem"
+            tools:text="@string/nc_public_call_explanation" />
+
+    </RelativeLayout>
+</RelativeLayout>

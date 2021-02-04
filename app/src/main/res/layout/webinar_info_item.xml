@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.yarolegovich.mp.MaterialPreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apc="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/webinar_settings"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.yarolegovich.mp.MaterialPreferenceCategory
+        android:id="@+id/conversation_info_webinar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        apc:mpc_title="@string/nc_webinar"
+        apc:mpc_title_color="@color/colorPrimary">
+
+        <com.yarolegovich.mp.MaterialSwitchPreference
+            android:id="@+id/conversation_info_lobby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            apc:mp_default_value="false"
+            apc:mp_icon="@drawable/ic_room_service_black_24dp"
+            apc:mp_icon_tint="@color/grey_600"
+            apc:mp_key="conversation_lobby"
+            apc:mp_title="@string/nc_lobby" />
+
+        <com.yarolegovich.mp.MaterialStandardPreference
+            android:id="@+id/start_time_preferences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            apc:mp_icon="@drawable/ic_timer_black_24dp"
+            apc:mp_icon_tint="@color/grey_600"
+            apc:mp_summary="@string/nc_manual"
+            apc:mp_title="@string/nc_start_time" />
+
+    </com.yarolegovich.mp.MaterialPreferenceCategory>
+
+</com.yarolegovich.mp.MaterialPreferenceScreen>

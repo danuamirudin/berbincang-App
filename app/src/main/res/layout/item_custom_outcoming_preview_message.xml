@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="2dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@id/image"
+        android:layout_width="@dimen/minimum_file_preview_size"
+        android:layout_height="@dimen/minimum_file_preview_size"
+        android:layout_alignParentEnd="true"
+        android:adjustViewBounds="true"
+        app:actualImageScaleType="fitCenter" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:layout_alignStart="@+id/image"
+        android:layout_alignEnd="@id/image"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:alignContent="stretch"
+        app:alignItems="stretch"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_end">
+
+        <androidx.emoji.widget.EmojiTextView
+            android:id="@id/messageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="none"
+            android:textColor="@color/warm_grey_four"
+            android:textColorLink="@color/warm_grey_four"
+            android:textIsSelectable="true"
+            android:textSize="12sp"
+            app:layout_alignSelf="flex_start"
+            app:layout_flexGrow="1"
+            app:layout_wrapBefore="true" />
+
+        <TextView
+            android:id="@id/messageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/warm_grey_four"
+            app:layout_alignSelf="center" />
+    </com.google.android.flexbox.FlexboxLayout>
+
+</RelativeLayout>

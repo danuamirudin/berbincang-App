@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey950"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.MagicCallActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/conversationRelativeLayoutView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true">
+
+            <com.facebook.drawee.view.SimpleDraweeView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/call_control_switch_camera"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="20dp"
+                app:backgroundImage="@color/colorPrimary"
+                app:placeholderImage="@drawable/ic_switch_video_white_24px"
+                app:roundAsCircle="true" />
+
+            <org.webrtc.SurfaceViewRenderer
+                android:id="@+id/pip_video_view"
+                android:layout_width="@dimen/large_preview_dimension"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/remote_renderers_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:background="@color/grey950"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/callControlsRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:id="@+id/callControlsLinearLayoutView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp"
+            android:animateLayoutChanges="true"
+            android:background="@android:color/transparent"
+            android:gravity="center">
+
+            <com.facebook.drawee.view.SimpleDraweeView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/call_control_microphone"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:alpha="0.7"
+                app:backgroundImage="@color/colorPrimary"
+                app:placeholderImage="@drawable/ic_mic_off_white_24px"
+                app:roundAsCircle="true" />
+
+            <com.facebook.drawee.view.SimpleDraweeView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/call_control_camera"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:alpha="0.7"
+                app:backgroundImage="@color/colorPrimary"
+                app:placeholderImage="@drawable/ic_videocam_white_24px"
+                app:roundAsCircle="true" />
+
+            <com.facebook.drawee.view.SimpleDraweeView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/callControlEnableSpeaker"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:visibility="gone"
+                app:backgroundImage="@color/colorPrimary"
+                app:placeholderImage="@drawable/ic_volume_mute_white_24dp"
+                app:roundAsCircle="true" />
+
+        </LinearLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/callControlHangupView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_above="@id/callControlsLinearLayoutView"
+            android:layout_centerHorizontal="true"
+            app:backgroundImage="@color/nc_darkRed"
+            app:placeholderImage="@drawable/ic_call_end_white_24px"
+            app:roundAsCircle="true" />
+    </RelativeLayout>
+
+    <include
+        layout="@layout/call_states"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

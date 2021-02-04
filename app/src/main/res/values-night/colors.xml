@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Nextcloud Talk application
+  ~
+  ~ @author Mario Danic
+  ~ Copyright (C) 2017-2019 Mario Danic <mario@lovelyhq.com>
+  ~ @author Daniel Bailey
+  ~ Copyright (C) 2019 Daniel Bailey <db@grappleIT.co.uk>
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<resources>
+    <color name="conversation_item_header">#9FBDCC</color>
+    <!--<color name="conversation_item_header">#CFCFCF</color>-->
+
+    <color name="bg_default">#222222</color>
+    <color name="bg_alt">#222222</color>
+
+    <!-- Chat window incoming message text & informational -->
+    <color name="nc_incoming_text_default">#D8D8D8</color>
+    <color name="nc_author_text">#65A7CA</color>
+    <color name="nc_chip_mention_you_background">#0083C9</color>
+    <color name="nc_chip_mention_others_background">#6F6F6F</color>
+    <color name="nc_grey">@android:color/holo_purple</color>
+    <color name="bg_bottom_sheet">#222222</color>
+    <color name="bg_message_list_incoming_bubble">#484848</color>
+    <color name="bg_message_list_outcoming_bubble">#003F62</color>
+
+
+    <color name="emoji_background">#313031</color>
+    <color name="emoji_divider">#15FFFFFF</color>
+</resources>
