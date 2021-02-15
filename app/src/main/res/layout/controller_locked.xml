@@ -8,17 +8,19 @@
 
     <ImageView
         android:id="@+id/appLogo"
-        android:layout_width="92dp"
-        android:layout_height="92dp"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:scaleType="center"
-        android:src="@drawable/ic_launcher_foreground" />
+        android:src="@drawable/berbincang" />
 
     <ImageView
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_alignTop="@id/appLogo"
         android:layout_alignEnd="@id/appLogo"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="-2dp"
         android:src="@drawable/ic_lock_white_24px" />
 
     <TextView
@@ -29,6 +31,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/margin_between_elements"
         android:padding="16dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
         android:text="@string/nc_locked"
         android:textAlignment="center"
         android:textColor="@color/white" />

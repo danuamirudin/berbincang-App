@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"
-        app:layout_behavior="com.nextcloud.talk.utils.FABAwareScrollingViewBehavior">
+        app:layout_behavior="com.skripsi.berbincang.utils.FABAwareScrollingViewBehavior">
 
         <FrameLayout
             android:layout_width="match_parent"

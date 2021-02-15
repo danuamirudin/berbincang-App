@@ -18,22 +18,22 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nextcloud.talk.services.firebase;
+package com.skripsi.berbincang.services.firebase;
 
 import android.annotation.SuppressLint;
 
 import autodagger.AutoInjector;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.nextcloud.talk.application.NextcloudTalkApplication;
-import com.nextcloud.talk.jobs.NotificationWorker;
-import com.nextcloud.talk.jobs.PushRegistrationWorker;
-import com.nextcloud.talk.utils.bundle.BundleKeys;
+import com.skripsi.berbincang.application.NextcloudTalkApplication;
+import com.skripsi.berbincang.jobs.NotificationWorker;
+import com.skripsi.berbincang.jobs.PushRegistrationWorker;
+import com.skripsi.berbincang.utils.bundle.BundleKeys;
 
 import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
-import com.nextcloud.talk.utils.preferences.AppPreferences;
+import com.skripsi.berbincang.utils.preferences.AppPreferences;
 
 import javax.inject.Inject;
 
